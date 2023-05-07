@@ -12,6 +12,13 @@ public class ListExample {
         int queryCount = sc.nextInt();
 
         List<Integer> processedList = processQueries(sc, queryCount, list);
+        String printList = processedList.toString();
+
+        String result = printList
+                .substring(1,printList.length()-1)
+                .replace(",","");
+
+        System.out.println(result);
     }
 
     public static List<Integer> processQueries(Scanner sc, int queryCount, List<Integer> myList) {
